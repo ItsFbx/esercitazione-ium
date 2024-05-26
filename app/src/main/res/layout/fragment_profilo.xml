@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfiloFragment"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textColor="@color/hint"
+        android:id="@+id/nome"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="nome "
+        android:textSize="23sp"
+        android:id="@+id/textViewNome"
+        android:textColor="@color/white"
+        android:layout_below="@+id/nome"
+        android:layout_marginHorizontal="50dp" />
+
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cognome"
+        android:textColor="@color/hint"
+        android:id="@+id/cognome"
+        android:layout_below="@id/textViewNome"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cognome"
+        android:textSize="23sp"
+        android:id="@+id/textViewCognome"
+        android:textColor="@color/white"
+        android:layout_below="@id/cognome"
+        android:layout_marginHorizontal="50dp"/>
+
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data di nascita"
+        android:textColor="@color/hint"
+        android:id="@+id/dataDiNascita"
+        android:layout_below="@id/textViewCognome"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="data di nascita"
+        android:textSize="23sp"
+        android:id="@+id/textViewDataDiNascita"
+        android:textColor="@color/white"
+        android:layout_below="@id/dataDiNascita"
+        android:layout_marginHorizontal="50dp"/>
+
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Matricola"
+        android:textColor="@color/hint"
+        android:id="@+id/matricola"
+        android:layout_below="@id/textViewDataDiNascita"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="matricola"
+        android:textSize="23sp"
+        android:id="@+id/textViewMatricola"
+        android:textColor="@color/white"
+        android:layout_below="@id/matricola"
+        android:layout_marginHorizontal="50dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonModifica"
+        android:textColor="@color/background"
+        android:layout_below="@+id/textViewMatricola"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="Modifica profilo"
+        android:textSize="25sp"
+        android:backgroundTint="@color/primary"/>
+
+
+
+
+
+</RelativeLayout>

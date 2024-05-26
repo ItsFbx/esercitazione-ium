@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AggiungiEsameFragment"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome esame"
+        android:textColor="@color/hint"
+        android:id="@+id/nomeEsame"
+        android:textSize="15sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="Nome esame"
+        android:textColorHint="@color/hint"
+        android:textSize="23sp"
+        android:id="@+id/editTextNome"
+        android:textColor="@color/white"
+        android:layout_below="@+id/nomeEsame"
+        android:layout_marginHorizontal="50dp" />
+
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CFU"
+        android:textColor="@color/hint"
+        android:id="@+id/cfu"
+        android:layout_below="@id/editTextNome"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="23sp"
+        android:id="@+id/editTextCFU"
+        android:textColor="@color/white"
+        android:layout_below="@id/cfu"
+        android:layout_marginHorizontal="50dp"
+        android:hint="CFU esame"
+        android:textColorHint="@color/hint"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voto esame"
+        android:textColor="@color/hint"
+        android:id="@+id/votoEsame"
+        android:layout_below="@id/editTextCFU"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="23sp"
+        android:id="@+id/editTextVoto"
+        android:textColor="@color/white"
+        android:layout_below="@id/votoEsame"
+        android:layout_marginHorizontal="50dp"
+        android:hint="Voto esame"
+        android:textColorHint="@color/hint"
+        android:inputType="number"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAggiungiEsame"
+        android:textColor="@color/background"
+        android:layout_below="@+id/editTextVoto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:text="Aggiungi Esame"
+        android:textSize="25sp"
+        android:backgroundTint="@color/primary"/>
+
+</RelativeLayout>

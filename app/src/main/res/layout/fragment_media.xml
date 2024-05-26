@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfiloFragment"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Media matematica"
+        android:textColor="@color/hint"
+        android:id="@+id/mediaMatematica"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="media matematica "
+        android:textSize="23sp"
+        android:id="@+id/textViewMediaMatematica"
+        android:textColor="@color/white"
+        android:layout_below="@+id/mediaMatematica"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Media ponderata"
+        android:textColor="@color/hint"
+        android:id="@+id/mediaPonderata"
+        android:layout_below="@id/textViewMediaMatematica"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="media ponderata"
+        android:textSize="23sp"
+        android:id="@+id/textViewMediaPonderata"
+        android:textColor="@color/white"
+        android:layout_below="@id/mediaPonderata"
+        android:layout_marginHorizontal="50dp"/>
+
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voto di laurea previsto"
+        android:textColor="@color/hint"
+        android:id="@+id/votoDiLaurea"
+        android:layout_below="@id/textViewMediaPonderata"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="voto di laurea previsto"
+        android:textSize="23sp"
+        android:id="@+id/textViewVotoDiLaurea"
+        android:textColor="@color/white"
+        android:layout_below="@id/votoDiLaurea"
+        android:layout_marginHorizontal="50dp"/>
+
+
+
+</RelativeLayout>

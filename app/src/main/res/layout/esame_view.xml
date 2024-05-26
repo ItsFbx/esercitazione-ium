@@ -1,0 +1,75 @@
+<!-- list_item.xml -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:layout_marginStart="0dp"
+    android:layout_marginEnd="0dp"
+    android:background="@color/exams"
+    android:paddingTop="1dp"
+    android:paddingBottom="1dp"
+
+    ><!--app:cardUseCompatPadding="true"
+    app:cardElevation="10dp"-->
+    <!--era 130dp l'hight-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewNome"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="Analisi 1"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewVoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/textViewNome"
+            />
+
+        <TextView
+            android:id="@+id/textViewCfu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewVoto"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:text="9 CFU"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+        <ImageButton
+            android:id="@+id/buttonElimina"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/baseline_delete_24"
+            app:tint="@color/accent"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_delete_24"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            />
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
