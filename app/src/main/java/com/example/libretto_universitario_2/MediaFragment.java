@@ -20,11 +20,11 @@ public class MediaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_media, container, false);
-        int numCFU=0;
+        float numCFU=0;
         int numEsami=HomeActivity.utente.getEsamiArrayList().size();
-        float media=0;
-        float mediaPonderata=0;
-        float votoDiLaurea=0;
+        float media=0f;
+        float mediaPonderata=0f;
+        float votoDiLaurea=0f;
 
         TextView textViewMediaMatematica = view.findViewById(R.id.textViewMediaMatematica);
         TextView textViewMediaPonderata = view.findViewById(R.id.textViewMediaPonderata);
@@ -34,16 +34,16 @@ public class MediaFragment extends Fragment {
             media+=esame.getVoto();
         }
         media=media/numEsami;
-        textViewMediaMatematica.setText(media+"");
+        textViewMediaMatematica.setText((Math.round(media*100.0f)/100.0f)+"");
 
         for (Esame esame: HomeActivity.utente.getEsamiArrayList()){
             mediaPonderata+=esame.getVoto()*esame.getCfu();
             numCFU+=esame.getCfu();
         }
         mediaPonderata=mediaPonderata/numCFU;
-        textViewMediaPonderata.setText(mediaPonderata+"");
-        votoDiLaurea=(mediaPonderata*110)/30;
-        textViewVotoDiLaurea.setText(votoDiLaurea+"");
+        textViewMediaPonderata.setText((Math.round(mediaPonderata)*100.0f)/100.0f+"") ;
+        votoDiLaurea=(mediaPonderata*110.0f)/30.0f;
+        textViewVotoDiLaurea.setText((Math.round(votoDiLaurea*100.0f)/100.0f)+"");
 
         return view;
     }

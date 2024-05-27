@@ -1,5 +1,6 @@
 package com.example.libretto_universitario_2;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -37,7 +38,7 @@ public class ProfiloFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ModificaProfiloActivity.class);
                 startActivity(intent);
-
+                getActivity().finish();
             }
         });
         return view;

@@ -1,9 +1,12 @@
 package com.example.libretto_universitario_2;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -12,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -26,6 +30,10 @@ public class ModificaProfiloActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modifica_profilo);
+        Window window = this.getWindow();
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.background));
 
         Utente utente=HomeActivity.utente;
 
@@ -48,6 +56,16 @@ public class ModificaProfiloActivity extends AppCompatActivity {
         });
 
         Button buttonConferma = findViewById(R.id.buttonConferma);
+        Button buttonIndietro = findViewById(R.id.buttonIndietro);
+
+        buttonIndietro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ModificaProfiloActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         buttonConferma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +76,8 @@ public class ModificaProfiloActivity extends AppCompatActivity {
                     /*HomeActivity.utente.setMatricola(editTextMatricola.getText().toString());*/
                     HomeActivity.utente.setPassword(editTextPassword.getText().toString());
                     Toast.makeText(getApplicationContext(),"Profilo aggiornato",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(ModificaProfiloActivity.this, HomeActivity.class);
+                    startActivity(intent);
                     finish();
                 }
                 else {
@@ -105,6 +125,13 @@ public class ModificaProfiloActivity extends AppCompatActivity {
                     }
                 }, year, month, day);
         datePickerDialog.show();
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(ModificaProfiloActivity.this, HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 
